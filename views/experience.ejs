@@ -1,0 +1,176 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <base href = "/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "./stylesheets/style.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+</head>
+<style>
+    /*main*/
+#main-content
+{
+    float: right;
+    height: auto;
+    width: 79%;
+    margin-top: 125px;
+    background-color: #e6dede;
+    padding-bottom : 30px;
+}
+
+#content-head
+{
+    padding: 10px;
+    border-left: 4px solid #2e353e;
+    background-color: #24a9e5;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    color: white;
+    font-size : 20px;
+    font-family : segoe ui;
+    border-radius : 3px;
+}
+#content-head i
+{
+    font-size : 23px; 
+    margin-right : 30px;
+    margin-left : 10px;
+}
+#form
+{
+    width: 80%;
+    padding-bottom : 30px;
+    margin: auto;
+    margin-top: 20px;
+    background-color : white;
+    border-radius : 3px;
+}
+.input-elements 
+{
+    /* border: 0.2px solid #cebebe; */
+    border: none;
+    background-color: #e7d6d69c;
+    outline: none;
+    height: 38px;
+    width: 80%;
+    padding: 17px;
+    box-shadow: inset 2px 2px 4px -2px #bc8383;
+    margin-left: 10%;
+    margin-top : 10px;
+}
+.input-title
+{
+    margin-left: 10%;
+    margin-top : 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size : 15px;
+}
+.input-logo
+{
+    height:100%;
+    width:7%;
+    background-color:#515d6b;
+    float:left;
+}
+.input-logo i
+{
+    font-size: 23px;
+    color: white;
+    margin: auto;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+#submit
+{
+    margin-left: 10%;
+    margin-top : 25px;
+    width: 80%;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #6f9acec9;
+    border: 0.3px solid #6f9acec9;
+    color: white;
+    font-size: 15px;
+    font-family: segoe UI;
+    box-shadow: 1px 3px 12px -3px #828080;
+}
+#added
+{
+    width : 80%;
+    margin:auto;
+    height : auto;
+    /* background-color : gray; */
+}
+#added li 
+{
+    margin-top : 10px;
+    padding : 10px;
+    background-color : lightgray;
+    border-radius : 4px;
+    border : 0.5px solid #6dadca;
+}
+</style>
+<body>
+
+<header>
+    <% include ./myheader %>
+</header>
+
+    <% include ./mysidebar %>
+
+    <div id = "main-content">
+    
+        <div id = "content-head"><i class="fa fa-suitcase"></i>Experience</div>
+
+        <% if(locals.experience) { %>
+            <div id = "added">
+                <% var i=0 %>
+                <% for(i=0; i < experience.length; i++) {%>
+                    <li>
+                        <%= experience[i].employer %>, <%= experience[i].job_title %>
+                    </li>
+                <% } %>
+            </div>
+        <% } %>
+
+        <div id = "form">
+                <form action ="/insert-experience" method = "POST">
+                    <input type = "text" name = "userid" value = "<%= user.userid%>" style = "display:none">
+
+                    <div class = "input-title" style="padding-top:25px;">Employer</div>
+                    <input type = "text" placeholder = "e.g. Google" class = "input-elements" name = "employer">
+                    
+                    <div class = "input-title">Job title</div>
+                    <input type = "text" placeholder = "e.g. Engineer" class = "input-elements" name = "job_title">
+
+                    <div class = "input-title">City</div>
+                    <input type = "text" placeholder = "City"  class="input-elements" name = "city">
+
+                    <div class = "input-title">State</div>
+                    <input type = "text" placeholder = "State"  class="input-elements" name = "state">
+
+                    <div class = "input-title">Start Date</div>
+                    <input type = "date" class="input-elements" name = "start_date">
+
+                    <div class = "input-title">End Date</div>
+                    <input type = "date" class="input-elements" name = "end_date">
+                    
+                    <button id = "submit">save</button>
+                </form>
+                <a href = "/education"><button id = "submit">Next</button></a>
+        </div>
+        
+
+    </div>
+
+<footer>
+</footer>
+
+</body>
+
+<script src ="./javascripts/hide.js"> </script>
+</html>

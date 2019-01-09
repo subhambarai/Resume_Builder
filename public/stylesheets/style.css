@@ -1,0 +1,165 @@
+body
+{
+    margin:0%;
+}
+header
+{
+    height:21%;
+    width:100%;
+    position:fixed;
+}
+#navbar
+{
+    background-color:#97d559;
+    height:50%;
+    width:100%;
+}
+#indicator-wrapper
+{
+    width:100%;
+    height:50%;
+    box-shadow : 0px 3px 7px -2px #706a6a; 
+    background-color:white;
+}
+#indicator
+{
+    height:100%;
+    width:85%;
+    margin:auto;
+}  
+.item-container
+{
+    margin-top:22px; 
+    margin-right:1%;
+    width: 13.2%;
+    height:37%;
+    font-size:12px;
+    float:left;
+    text-align:center;
+     /* background-color:green; */
+}
+.checkbox
+{
+    border:1px solid gray;
+    height:100%;
+    width:19%;
+    float:left;
+}
+.checkbox-done
+{
+    border:1px solid gray;
+    height:100%;
+    width:19%;
+    float:left;
+    background-color:#5bcc5b;
+}
+.text
+{
+    width:81%;
+    height:100%;
+    float:right;
+    margin-top:4px;
+    font-family:Segoe UI;
+    font-weight:bold;
+    letter-spacing:1;
+    /* background-color:green; */
+}
+#logout
+{
+    float:right;
+    margin-top: 13px;
+    margin-right:10px;
+    background-color : transparent;
+    border : 1px solid white;
+}
+#logout a
+{
+    text-decoration:none;
+    color:white;
+}
+#logout i
+{
+    margin-right : 10px;
+    font-size : 13px;
+}
+#user-name
+{
+    float : right; 
+    margin : 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-weight : bold; */
+    text-transform: capitalize;
+    color:white;
+}
+#user-name i
+{
+    margin-right : 8px;
+    font-size : 17px;
+}
+#title
+{
+    margin : 12px;
+    color : white;
+    font-size : 25px;
+    font-weight:bold;
+    font-family: helvetica;
+    float : left; 
+}
+#logo
+{
+    height : 36px;
+    width : 36px;
+    margin : 12px;
+    float:left;
+}
+
+/*sidebar*/
+#sidebar
+{
+    height: 79%;
+    width: 21%;
+    background-color: #2e353e;
+    position: fixed;
+    top:21%;
+    overflow: auto;
+    float:left;
+    font-family:Segoe UI;
+    color:#c5bfbf;
+}
+#sidebar-content
+{
+    margin-top:30px;
+    margin-left:10px;
+    margin-right:10px;
+}
+.side-elements
+{
+    padding: 10px;
+    border-left: 4px solid #2e353e;
+}
+#sidebar-content a
+{
+    color:#c5bfbf;
+    text-decoration:none;
+}
+.side-elements i
+{
+    margin-right:10px;
+}
+.active,.side-elements:hover
+{
+    border-left: 4px solid #9191d9;
+    background-color: #47505b;
+    color:#c5bfbf;
+}
+#hide
+{
+    background-color:transparent;
+    margin-left:10px;
+    color : #c5bfbf;
+    border : 1px solid #c5bfbf;
+    margin-bottom : 10px;
+    cursor:  pointer; 
+}
+
+

@@ -1,0 +1,60 @@
+<div id = "navbar">
+    <img src = "./images/applogo.png" id = "logo">
+    <div id = "title">RESUME</span> BUILDER</div>
+    <button id = "logout"><a href = "/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></button>
+    <div id = "user-name"><i class="fas fa-user-circle"></i><%= user.fname %> <%= user.lname %></div>
+    
+</div>
+
+    <div id = "indicator-wrapper">
+        <div id = "indicator">
+
+            <div class = "item-container">
+                <% if (personal_submit == true) { %>
+                    <div class = "checkbox-done"></div>
+                <%} else { %>
+                    <div class = "checkbox"></div>
+                <% } %>
+                <div class = "text">PERSONAL</div>
+            </div>
+
+            <div class = "item-container">
+                <% if (experience_submit == true) { %>
+                    <div class = "checkbox-done"></div>
+                <%} else { %>
+                    <div class = "checkbox"></div>
+                <% } %>
+                <div class = "text">EXPERIENCE</div>
+            </div>
+
+            <div class = "item-container">
+                <% if (education_submit == true) { %>
+                    <div class = "checkbox-done"></div>
+                <%} else { %>
+                    <div class = "checkbox"></div>
+                <% } %>
+            <div class = "text">EDUCATION</div>
+            </div>
+            <div class = "item-container">
+                <% if (skills_submit == true) { %>
+                    <div class = "checkbox-done"></div>
+                <%} else { %>
+                    <div class = "checkbox"></div>
+                <% } %>
+                <div class = "text">SKILLS</div>
+            </div>
+            <div class = "item-container">
+                <% if (summary_submit == true) { %>
+                    <div class = "checkbox-done"></div>
+                <%} else { %>
+                    <div class = "checkbox"></div>
+                <% } %>
+                <div class = "text">SUMMARY</div>
+            </div>
+            <div class = "item-container"><div class = "checkbox"></div><div class = "text">FINALIZE</div></div>
+            <div class = "item-container">
+                    <div class = "checkbox"></div>
+                    <div class = "text">TEMPLATE</div>
+            </div>
+        </div>
+    </div>

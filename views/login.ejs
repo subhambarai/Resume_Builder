@@ -1,0 +1,91 @@
+<html>
+    <head>
+    </head>
+    <style>
+        body
+        {
+            background: url(./images/night.png);
+             background-size: cover; 
+            background-position: center;
+        }
+        #login-form
+        {
+            background: black;
+            /* position : relative; */
+            margin: auto;
+            height : 350px;
+            width: 30%;
+            border: 1px solid gray;
+            box-shadow: 3px 3px 10px black;
+            margin-top:100px;
+            opacity:0.9;
+        }
+        .input-elements:nth-of-type(1)
+        {
+           margin-top: 10px;
+        }
+        .input-elements
+        {
+            border:none;
+            border-bottom: 1px solid white;
+            background-color:  transparent;
+            outline:none;
+            margin-left: 10%;
+            width: 80%; 
+            height: 40px;
+            color: white;
+            opacity:1;
+        }
+        input:-webkit-autofill{
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-text-fill-color: white;
+        }
+        .mybuttons
+        {
+            border:none;
+            width: 20%; 
+            height: 30px;
+            background-color:#fb2525;
+            text-decoration: none;
+            color:white;
+            border-radius:20px;
+            opacity:1;
+        }
+        .mybuttons:hover
+        {
+            cursor:pointer;
+            background-color:#ac0000;
+            border:1px solid white;
+        }
+        #result
+        {
+            position: absolute;
+            height: auto;
+            padding: 10px;
+            width: 28%;
+            background-color: #e6d74f;
+            top: 41px;
+            left: 35%;
+            border-radius: 4px;
+            font-family: segoe UI;
+            text-transform: capitalize;
+        }
+    </style>
+    <body>
+
+                    <% if (locals.message) { %>
+                        <div id="result">
+                                <%= message %> 
+                        </div>
+                    <% } %>
+                <div id = "login-form">
+                <form id = "login" action = "/login" method = "POST">   
+                    <center><p style= "color: white;font-size:25px; font-family: monospace;">LOGIN</p></center>
+                    <input type="text" class="input-elements"  placeholder = "Email.." name ="userid"><br><br>
+                    <input type="password" class="input-elements" placeholder = "Password.." name = "password"><br><br>
+                    <center><button class = "mybuttons">Login</button></center><br>
+                    <center><a style="text-decoration:none; color:white;" href = "/signup">Sign up</a></center>
+                </form>
+                </div>
+    </body>
+</html>

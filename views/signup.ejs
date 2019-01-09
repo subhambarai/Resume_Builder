@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+        body
+        {
+            background: url(./images/night.png);
+            /* background:#383e49; */
+             background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+        }
+        #login-form
+        {
+            background: black;
+            position : relative;
+            margin: auto;
+            height : 400px;
+            width: 30%;
+            border:3px solid #504f4f;
+            box-shadow: 3px 3px 10px black;
+            margin-top:100px;
+            opacity:0.9;
+        }
+        .input-elements:nth-of-type(1)
+        {
+           margin-top: 10px;
+        }
+        .input-elements
+        {
+            border:none;
+            border-bottom: 1px solid white;
+            background-color:  transparent;
+            outline:none;
+            margin-left: 10%;
+            width: 80%; 
+            height: 40px;
+            color: white;
+            opacity:1;
+        }
+        .mybuttons
+        {
+            border:none;
+            width: 20%; 
+            height: 30px;
+            background-color:#fb2525;
+            text-decoration: none;
+            color:white;
+            border-radius:20px;
+            opacity:1;
+        }
+        .mybuttons:hover
+        {
+            cursor:pointer;
+            background-color:#ac0000;
+            border:1px solid white;
+        }
+        #result
+        {
+            position: absolute;
+            height: auto;
+            padding: 10px;
+            width: 30%;
+            background-color: #e6d74f;
+            top: 41px;
+            left: 35%;
+            border-radius: 4px;
+            font-family: segoe UI;
+            text-transform: capitalize;
+        }
+    </style>
+    <body>
+        <header>
+                <% if (locals.message) { %>
+                    <div id="result">
+                            <%= message %> 
+                    </div>
+                <% } %>
+            <form id="login-form" action = "/signup" method = "POST">
+            <center><p style= "color: white;font-size:25px; font-family: monospace;">SIGN-UP</p></center>
+                
+                <input type="text" class="input-elements" name = "fname" placeholder = "First name"><br>
+                <input type="text" class="input-elements" name = "lname" placeholder = "Last name"><br>
+                <input type="text" class="input-elements" name = "userid" placeholder = "Email"><br>
+                <input type="password" class="input-elements" name = "password" placeholder = "Password"><br><br>
+                <center><button type = "submit" class="mybuttons" name = "submit">Sign up</button></center>
+            </form>
+            
+        </header>
+
+    </body>
+</html>
